@@ -34,4 +34,4 @@ A FastAPI App with JWT Authentication and Role-based Access Control
 8. Try doing the above for both user and admin roles (notice that only admins are allowed to perform the above actions)
 9. Try viewing all existing projects at the `/project/projects` route (notice that both admins and users have access to this)
 
-### **Here's a video walkthrough on how this project works:** 
+#### **Here's a video walkthrough on how this project works:** https://www.loom.com/share/4ff37445049a4e46b2b0658122209ac9
