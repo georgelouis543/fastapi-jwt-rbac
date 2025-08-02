@@ -3,3 +3,4 @@ passlib[bcrypt]
 sqlmodel~=0.0.24
 psycopg[binary]
 python-dotenv~=1.1.1
+pyJWT
