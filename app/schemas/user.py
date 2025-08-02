@@ -1,6 +1,6 @@
 from enum import Enum
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 
 class UserRole(str, Enum):
@@ -20,6 +20,12 @@ class CreateUserRequest(BaseModel):
         description="Password should be at least 8 chars"
     )
     user_role: UserRole = Field(default="user")
+
+    @field_validator("user_name", "password")
+    def no_spaces_allowed(cls, v: str):
+        if " " in v:
+            raise ValueError("Spaces are not allowed.")
+        return v
 
 
 class UserRead(BaseModel):
