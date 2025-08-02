@@ -60,7 +60,7 @@ async def delete_single_project(
     return result
 
 
-@router.put("edit-project/{project_id}")
+@router.put("/edit-project/{project_id}")
 async def update_single_feed(
         project_id: int,
         update_data: UpdateProjectRequest,
